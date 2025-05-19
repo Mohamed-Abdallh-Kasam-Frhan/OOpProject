@@ -57,4 +57,12 @@ public interface CanTeacherDo extends CanStudentDo{
      * @param plan text plan
      */
     void setPlanForStudent(int studentId, String plan);
+    
+   /***
+    * 
+    * @param idTeacher is id of teacher
+    */
+    void viewTeacherProfile(int idTeacher);
+  
+    
 }
