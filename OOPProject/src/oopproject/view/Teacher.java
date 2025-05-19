@@ -1,13 +1,17 @@
 package oopproject.view;
 
+
 import java.util.Scanner;
 import oopproject.view.manager.Manager;
+import oopproject.view.teacher.TeacherFun;
 
 public class Teacher {
+     private static TeacherFun t =new TeacherFun();
+     private static   Scanner in = new Scanner(System.in);
     public static void main() {
-        Scanner in = new Scanner(System.in);
+     
         int chosen;
-        Manager m = new Manager();
+        
         System.out.println("Profile Operations Enter 1\nStudent Management Enter 2\nReports and Plans Enter 3\nView Student Reports Enter 4\nTo EXIT Enter 0");
         do {
             chosen = in.nextInt();
@@ -17,7 +21,7 @@ public class Teacher {
                     int profileChoice = in.nextInt();
                     switch (profileChoice) {
                         case 1:
-                            m.addTeacher(teacherData);
+                         login();
                             break;
                         case 2:
                             viewProfile();
@@ -124,8 +128,28 @@ public class Teacher {
     }
 
     // Add method implementations here
-    public static void login() {}
-    public static void viewProfile() {}
+    public static void login() {
+         int id=0;
+          String password=null ;
+           boolean check;
+        do{
+      try{  System.out.println("enter your id");
+         id =in.nextInt();
+        System.out.println("enter your password");
+        password =in.next();
+        check=false;
+      } catch (Exception e){
+          System.out.println(e);
+          check=true;
+    }
+        }while(check);
+    t.Login(id, password);
+    }
+    public static void viewProfile() {
+    
+    
+    t.
+    }
     public static void updateProfile() {}
     public static void setStudentPresent() {}
     public static void setDailySaveRate() {}
