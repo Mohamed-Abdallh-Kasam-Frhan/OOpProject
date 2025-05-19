@@ -17,7 +17,7 @@ public class ReportModel extends Model{
     private static LinkedHashMap<String, String> insertable;
     private static LinkedHashMap<String, String> updateable;
     private static LinkedHashMap<String, String> selectCols;
-    
+    static{
    insertable =new LinkedHashMap<>();
    
    insertable.put("id","string");
@@ -39,7 +39,7 @@ public class ReportModel extends Model{
   insertable.put("evaluation","string");
    insertable.put("date","string");
 
-  
+  ///
   selectCols =new LinkedHashMap<>();
    
    insertable.put("id","string");
@@ -50,7 +50,7 @@ public class ReportModel extends Model{
   insertable.put("ReviewQuantity","string");//اسم السورة و رقم الاياية
   insertable.put("evaluation","string");
    insertable.put("date","string");
-
+    }
     public ReportModel() throws SQLException {
         super("report", insertable, updateable, selectCols);
         
